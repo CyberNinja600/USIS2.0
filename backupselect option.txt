@@ -1,0 +1,21 @@
+                                        <select class="form-control" id="advising_student">
+                                            <option >
+                                            <?php
+                                            $sql = "Select course_code from course_offered";
+                                            $result = mysqli_query($conn,$sql);
+                                                if(mysqli_num_rows($result)!=0)
+                                                    while($row=mysqli_fetch_array($result)){
+                                            ?>
+                                            <?php 
+                                                echo '<option value="-">' 
+                                            ?>
+
+                                            <?php
+                                                echo $row[0]; 
+                                            ?>
+                                        
+                                            <?php    
+                                                echo '</option>';  } 
+                                            ?>
+                                            </option>
+                                        </select>
